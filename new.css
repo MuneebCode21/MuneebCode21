@@ -1,0 +1,68 @@
+body{
+    height: 600vh;
+}
+
+
+.lello{
+    background-color: red;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 200px;
+}
+
+.cheeb{
+    background-color: aqua;
+    height: 200px;
+    position: relative;
+}
+
+.Munib{
+    background-color: blue;
+    height: 200px;
+    position: sticky;
+    top: 0;
+}
+
+.child{
+    background-color: green;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.Title{
+    font-size: 50px;
+    
+}
+
+.Child{
+    font-size: 20px
+}
+
+@media(max-width: 600px){
+    .Title{
+        font-size: 30px;
+    }
+    .Child{
+        font-size: 15px;
+    }
+
+}
+
+p{
+    animation: pointdown 500ms infinite alternate-reverse ;
+    transform: translate(0,16px);
+}
+
+@keyframes pointdown{
+    0%{
+        transform: translate(0,0);
+    }
+
+    100%{
+        transform: translateY(0,16px);
+    }
+}

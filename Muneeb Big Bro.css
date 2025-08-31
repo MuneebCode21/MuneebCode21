@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(250, 235, 215);
+}
+
+div{
+    background-color: hsl(180, 100%, 50%);
+    display: block;
+    height: 100px;
+    width: 200px;
+    visibility: block;
+    text-align: center;
+    font-style: oblique;
+}
+
+span{
+    background-color: hsl(271, 57%, 54%);
+    display: block;
+    height: 100px;
+    width: 200px;
+    text-align: center;
+    font-size: large;
+    font-style: oblique;
+}
+
+.box{
+    border: 3px dotted hsl(115, 96%, 45%);
+    padding: 25px;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+    font-style: italic;
+    text-align: center;
+    min-height: 100%;
+}
+
+container{
+    background-color: hsl(182, 100%, 37%);
+    height: 200vh;
+}
+
+

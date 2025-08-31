@@ -1,0 +1,49 @@
+body{
+    background-color: rgb(94, 46, 46);
+}
+
+header{
+    background-color:lightcoral;
+}
+
+h1{
+    border-bottom: 3px dashed hsl(275, 99%, 48%);
+    font-family: sans-serif;
+    color: white;
+}
+
+#p1{
+    border: 3px solid hsl(59, 98%, 49%);
+    border-radius: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: small;
+    font-weight: 1em;
+    font-style: italic;
+    color: rgb(97, 96, 92);
+}
+
+#p2{
+    border-radius: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: small;
+    font-weight: 1em;
+    font-style: italic;
+    color: #0c6599;
+}
+
+#p3{
+     border-radius: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: small;
+    font-weight: 1em;
+    font-style: italic;
+    color: orange;
+}
+
+footer{
+    background-color: white;
+}
+
+h5{
+    color: black;
+}
