@@ -66,3 +66,18 @@ p{
         transform: translateY(0,16px);
     }
 }
+
+h2:hover{
+    background-color: aqua;
+    padding: 16px 24px;
+    opacity: 0.8;
+}
+
+h2:not(:hover){
+    background-color: yellow;
+}
+
+
+h2:nth-child(2n+3){
+    background-color: chocolate;
+}

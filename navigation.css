@@ -1,0 +1,56 @@
+h1{
+    text-align: center;
+}
+
+h1::first-letter{
+    font-style: italic;
+    font-size: 4px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    margin: 0px;
+    background-color: aliceblue;
+    height: 200vh;
+}
+
+.navigation ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgba(23, 20, 20, 0.601);
+    display: block;
+    position: absolute;
+
+}
+
+.navigation li{
+    color: red;
+    padding: 20px;
+    margin: 0px;
+    display: inline-block;
+    font-size: 2em;
+    font-family: bold;
+    box-shadow: 6px 6px 6px grey;
+    text-shadow: 20px 20px 20px white;
+    position: relative;
+    cursor: pointer;
+    border: 2px dotted yellow;
+    transition: all 300ms ease-in-out;
+    border-radius: 10px;
+}
+
+.navigation li:hover{
+    background-color: azure;
+    padding: 2px;
+    opacity: 0.5;
+}
+
+.navigation li:not(.hover){
+    background-color: bisque;
+}
+
+.navigation li::selection{
+    background-color: pink;
+}
+

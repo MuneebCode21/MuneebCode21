@@ -1,0 +1,253 @@
+body{
+    background-color: aliceblue;
+    height: 500vh;
+    background-image: url(Images/1900x1900-000000-80-0-0.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: none;
+}
+
+
+h1{
+    text-shadow: 3px 3px 3px red;
+    border: 3px inset blue;
+    border-radius: 15px;
+
+}
+
+h1::first-letter{
+    font-size: 3em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.hello{
+    box-shadow: 2px 2px 2px green;
+    border-bottom: 2px dotted orange;
+}
+
+.hello::first-line{
+    background-color: darksalmon;
+}
+
+.container{
+    text-align: center;
+}
+
+.Title{
+    margin-top: 30px;
+    padding: 5px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: lightblue;
+    background-color: green;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 200ms ease-in-out;
+}
+
+.Title:hover{
+    opacity: 0.8;
+    padding: 12px 24px;
+    background-color: blueviolet;
+}
+
+.Title:active{
+    font-size: 2em;
+    background-color: aqua;
+}
+
+.box1{
+    background-color: red;
+    height: 100px;
+    font-size: 5em;
+    margin-bottom: 20px;
+    padding: 4px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    text-shadow: 4px 4px 4px white;
+    box-shadow: 5px 5px 5px purple;
+    position: relative;
+    animation: movedown 600ms alternate-reverse infinite;
+    transition: translate(0,10px);
+
+}
+
+.box2{
+    background-color: yellow;
+    height: 100px;
+    font-size: 5em;
+    padding: 4px;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+     text-shadow: 7px 7px 7px white;
+    box-shadow: 5px 5px 5px orange;
+    position:sticky;
+    top: 0;
+    animation: moveup 600ms alternate-reverse infinite;
+    transition: translate(0,10px);
+
+}
+
+@keyframes movedown{
+    0%{
+        transform: translateY(0px);
+    }
+
+    100%{
+        transform: translateY(10px);
+    }
+}
+
+@keyframes moveup{
+    0%{
+        transform: translateY(10px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.Picture1{
+    height: 300px;
+    width: 300px;
+    float: left;
+    margin: 20px;
+}
+
+.Picture2{
+    height: 300px;
+    width: 300px;
+    float: right;
+    margin: 20px;
+}
+
+.border{
+    border: 2px solid black;
+    overflow: scroll;
+}
+
+p{
+    display: block;
+    visibility: visible;
+    overflow: auto;
+}
+
+p:hover{
+    background-color: aqua;
+    padding: 16px 16px;
+    opacity: 0,8;
+}
+
+p::selection{
+    color: gold;
+}
+
+p:not(:hover){
+    background-color: azure;
+}
+
+p:nth-child(:even){
+    background-color: coral;
+}
+
+#fruit li::before{
+    content: "✔️";
+}
+
+#Apple::after{
+    content: "🍎";
+}
+
+#Bannana::after{
+    content: "🍌";
+}
+
+#Mango::after{
+    content: "🥭";
+}
+
+.pagination{
+    text-align: center;
+}
+
+.pagination a{
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    padding: 8px 15px;
+    display: inline-block;
+    margin: 4px
+}
+
+.pagination a.active{
+    color: green;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.pagination a:hover:not(.active){
+    background-color: gray;
+    font-size: large;
+    border-radius: 6px;
+}
+
+.container {
+    position: relative; 
+    display: inline-block;
+}
+
+.container button {
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 10px 15px;
+    border: none;
+    background-color: beige;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.container button:hover {
+    background-color: aquamarine;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: gray;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px black;
+    min-width: 160px;
+}
+
+.dropdown a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+}
+
+.container:hover button{
+    background-color: aqua;
+}
+
+.container a.hover{
+    background-color: aquamarine;
+}
+
+
+.container:hover .dropdown {
+    display: block; 
+}
