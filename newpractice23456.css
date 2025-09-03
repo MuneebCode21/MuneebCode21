@@ -1,0 +1,134 @@
+body{
+    height: 200vh;
+    background-color: aquamarine;
+    background-image: url(Images/images.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.containner{ 
+        display: flex; 
+        flex-direction: row-reverse;
+        row-gap: 2em;
+        column-gap: 1em;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        align-items: center;
+        position: sticky;
+        top: 0;
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    text-align: center; 
+    margin: 10px;
+    padding: 0px;
+    border: 3px solid gray;
+    border-radius: 8px;
+    text-shadow: 2px 2px 2px white;
+    color: black;
+    font-size: 4em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    animation: pointdown 2s alternate-reverse infinite;
+    transform: translate(0px,10px) rotateY(180deg) scale(1.15);
+    max-width: 400px;
+}
+
+@media (max-width: 400px) {
+    .box{
+        width: 200px;
+    }
+}
+
+
+.box:hover{
+    background-color: crimson;
+    padding: 12px 24px;
+    opacity: 0.8;
+}
+
+@keyframes pointdown {
+    0% {
+        transform: translate(0px,0px) rotateY(-20deg) scale(1);
+    }
+    50% {
+        transform: translateY(0px,5px) rotateY(0deg) scale(1.05); 
+    }
+    100% {
+        transform: translateY(0px,10px) rotateY(-20deg) scale(1.15);
+        box-shadow: 6px 6px 6px yellow;
+    }
+}
+
+#box1{
+    background-color: aqua;
+}
+
+#box2{
+    background-color: red;
+}
+
+#box3{
+    background-color: orange;
+}
+
+#box4{
+    background-color: green;
+}
+
+#box5{
+    background-color: yellow;
+}
+
+#box6{
+    background-color: pink;
+}
+
+#box7{
+    background-color: lightgreen;
+}
+
+#box8{
+    background-color: silver;
+}
+
+#box9{
+    background-color: salmon;
+}
+
+#box10{
+    background-color:purple;
+}
+
+#box10::before{
+    content: icon🍎;
+}
+
+#box11{
+    background-color: burlywood;
+}
+
+#box11::first-letter{
+    background-color: cadetblue;
+}
+
+#box11::selection{
+    color: chartreuse;
+}
+
+#box12{
+    background-color: chartreuse;
+    font-size: medium;
+    overflow: scroll;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    flex-basis: 20%;
+}
