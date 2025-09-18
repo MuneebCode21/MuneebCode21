@@ -1,0 +1,99 @@
+  body {
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #74ebd5, #9face6);
+      margin: 0;
+    }
+    .game-container {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      text-align: center;
+      width: 360px;
+      animation: fadeIn 1s ease-in-out;
+      transition: transform 0.3s ease;
+    }
+    .game-container:hover {
+      transform: scale(1.03);
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 15px;
+      font-size: 26px;
+    }
+    p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    input[type="number"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 65%;
+      margin: 10px 0;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      text-align: center;
+      outline: none;
+      transition: 0.3s;
+    }
+    input[type="number"]:focus {
+      border-color: #4CAF50;
+      box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+    }
+    button {
+      padding: 12px 18px;
+      font-size: 16px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #4CAF50, #45a049);
+      color: white;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+    .message {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #555;
+      font-size: 18px;
+      min-height: 25px;
+      animation: fadeText 0.5s ease-in-out;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeText {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Win message style */
+    .win {
+      color: #2ecc71;
+      animation: pop 0.5s ease-in-out;
+    }
+    @keyframes pop {
+      0% { transform: scale(0.8); opacity: 0.6; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* Lose message style */
+    .hint {
+      color: #e67e22;
+    }
+    .error {
+      color: #e74c3c;
+    }

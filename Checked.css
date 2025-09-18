@@ -1,0 +1,18 @@
+body{
+    background-color: cadetblue;
+    height: 250vh;
+}
+
+.Checkers{
+    cursor: pointer;
+
+}
+
+#btn{
+    border-radius: 4px;
+    color: red;
+    padding: 10px;
+    font-size: 2em;
+    margin: 5px;
+    cursor: pointer;
+}

@@ -1,10 +1,11 @@
 body{
-    height: 250vh;
+    height: 450vh;
     background-color: aquamarine;
     background-image: url(Images/images.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-clip: border-box;
 }
 
 #countNumber{
@@ -127,4 +128,57 @@ body{
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+}
+
+.Video {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: 450px; 
+    width: 60%;    
+}
+
+#myButton{
+    display: block;
+    text-align: center;
+    border-radius: 4px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+}
+
+.Buttons{
+    display: flex;
+    justify-content: center;
+    gap: 30;
+    background-color: antiquewhite;
+}
+
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    padding: auto;
+    margin: auto;
+}
+
+#MyAge{
+    border-radius: 4px;
+    font-size: 15px;
+    padding: 5px;
+    margin: auto;
+}
+
+#mySubmit{
+    text-decoration: none;
+    font-size: 2em;
+    color: blue;
+}
+
+#Something{
+    font-size: 1.5em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    background-color: lightgray;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
 }
