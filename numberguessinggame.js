@@ -26,12 +26,13 @@ const minNumber = 1;
         message.textContent = `🎉 Congratulations! You guessed ${randomNumber} in ${attempts} attempts.`;
         running = false;
         window.alert("Congrats ypu are offically a nigga");
+        window.prompt("But are you ok tho???");
       } else if (guess < randomNumber) {
         message.textContent = "⬇️ Too low! Try again.";
       } else {
         message.textContent = "⬆️ Too high! Try again.";
       }
 
-      input.value = ""; // clear input after each try
-      input.focus(); // focus back on input
+      input.value = ""; 
+      input.focus(); 
     }
