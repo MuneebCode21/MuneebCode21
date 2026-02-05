@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine? 💖</title>
+    <link rel="Icon" href="Images/CACU048.jpg">
+</head>
+<body>
+    <audio id="bgMusic" loop class="background-music">
+        <source src="Music/Sahiba(KoshalWorld.Com).mp3" type="audio/mp3">
+        <source src="Music/Sahiba(KoshalWorld.Com).mp3" type="audio/mpeg">
+    </audio>
+    
+    <div class="heart-bg" id="heartBg"></div>
+
+    <img src="Images/Cat Love GIF by CATBAT.gif" alt="surprise cat" class="surprise-cat">
+
+    <div class="container">
+        <h1>💕 Hey Beautiful! 💕</h1>
+        
+        <div class="gif-placeholder">
+            <img src="Images/Cartoon Network Escandalosos Sticker by CNLA.gif" alt="cute bear" style="width: 100%; height: 100%; object-fit: contain; border-radius: 20px;">
+        </div>
+
+        <p class="question"><b>Will you be my Valentine?</b></p>
+
+        <div class="buttons">
+            <button id="yesBtn">Yes! 💖</button>
+            <button id="noBtn">No ☹️</button>
+        </div>
+    </div>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <div class="celebration">🎉💖✨</div>
+            <div style="margin: 20px 0;">
+                <img src="Images/Cat Love GIF by Mochimons.gif" alt="thank you" style="width: 200px; border-radius: 15px;">
+            </div>
+            <h2>Thank you, Aqsa my cutiepiee! 🥰👊😸</h2>
+            <div class="romantic-note">
+                <p>You are the shining star in the vastness of my universe, illuminating every corner of my heart with your radiant presence. 🌟</p>
+                <p>You are my yesterday's sweet memory, today's precious gift, and tomorrow's endless promise. I am the luckiest person alive to call you mine. 💕</p>
+                <p style="font-size: 22px; margin-top: 20px; color: #ff1493; font-weight: bold;">I love you more than words can express, my princess! 👑</p>
+            </div>
+            <div style="font-size: 40px; margin: 20px 0;">🌙</div>
+            <button class="close-popup" onclick="closePopup()">Forever Yours 💕</button>
+        </div>
+    </div>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .background-music {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;
+            background: linear-gradient(135deg, #ffd1dc 0%, #ffb6c1 50%, #ffc0cb 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .heart-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 30px;
+            animation: float 15s infinite;
+            opacity: 0.6;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            animation: sparkle 2s infinite;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .container {
+            animation: bounceIn 0.8s, glow 3s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3);
+            }
+            100% {
+                box-shadow: 0 20px 80px rgba(255, 105, 180, 0.6), 0 0 50px rgba(255, 182, 193, 0.4);
+            }
+        }
+
+        .container {
+            background: white;
+            padding: 50px 60px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3);
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            max-width: 600px;
+            animation: bounceIn 0.8s;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.3);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            color: #ff69b4;
+            font-size: 42px;
+            font-style: normal;
+            margin-bottom: 20px;
+            text-shadow: 6px 4px 4px rgba(255, 105, 180, 0.3);
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .question {
+            font-size: 28px;
+            color: #ff1493;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        .gif-placeholder {
+            width: 220px;
+            height: 220px;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, #ffd1dc, #ffb6c1);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+            border: 4px solid white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gif-placeholder::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            }
+            100% {
+                transform: translateX(100%) translateY(100%) rotate(45deg);
+            }
+        }
+
+        .gif-placeholder img {
+            position: relative;
+            z-index: 2;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 15px 40px;
+            font-size: 20px;
+            font-family: 'Comic Sans MS', cursive;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #yesBtn {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #yesBtn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        #yesBtn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        #yesBtn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(255, 20, 147, 0.4);
+        }
+
+        #noBtn {
+            background: linear-gradient(135deg, #ddd, #bbb);
+            color: #666;
+        }
+
+        #noBtn:hover {
+            background: linear-gradient(135deg, #ccc, #aaa);
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .popup-content {
+            background: linear-gradient(135deg, #ffffff 0%, #fff5f7 100%);
+            padding: 40px;
+            border-radius: 30px;
+            text-align: center;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: scaleIn 0.5s;
+            position: relative;
+            border: 3px solid #ffb6c1;
+            box-shadow: 0 20px 60px rgba(255, 105, 180, 0.5), 0 0 100px rgba(255, 182, 193, 0.3);
+            margin: 20px;
+        }
+
+        @keyframes scaleIn {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .popup-content h2 {
+            color: #ff69b4;
+            font-size: 38px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.3);
+        }
+
+        .popup-content p {
+            color: #ff1493;
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .celebration {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: rotate 2s infinite;
+        }
+
+        @keyframes rotate {
+            0%, 100% { transform: rotate(-10deg); }
+            50% { transform: rotate(10deg); }
+        }
+
+        .close-popup {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+            font-family: 'Comic Sans MS', cursive;
+            font-weight: bold;
+        }
+
+        .close-popup:hover {
+            transform: scale(1.05);
+        }
+
+        .romantic-note {
+            background: linear-gradient(135deg, #fff0f5, #ffe4e9);
+            padding: 25px;
+            border-radius: 20px;
+            margin: 20px 0;
+            border: 2px solid #ffb6c1;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+        }
+
+        .romantic-note p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            color: #d63384;
+            font-style: italic;
+        }
+
+        .surprise-cat {
+            position: fixed;
+            bottom: -150px;
+            right: 35px;
+            height: 130px;
+            width: 120px;
+            z-index: 999;
+            animation: catPeek 8s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes catPeek {
+            0%, 90%, 100% {
+                bottom: -150px;
+            }
+            5%, 85% {
+                bottom: 0px;
+            }
+        }
+    </style>
+
+    <script>
+        // Get music element
+        const music = document.getElementById('bgMusic');
+        
+        let input = "";
+
+        while (input !== "yes") {
+            input = prompt("Heyy Aqsa! Do You Like Me ??? (Yes or No)");
+
+            if (input === null) {
+                alert("So you don't :(");
+                input = ""; 
+            } else {
+                input = input.toLowerCase();
+            }
+        }
+
+        alert("YAYYYYYYYYYYYYYYYYYYYYYYYYY");
+        
+        music.play().catch(err => {
+            console.log("Music autoplay blocked - user interaction needed");
+        });
+
+        function createHeart() {
+            const heartBg = document.getElementById('heartBg');
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '💖';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
+            heartBg.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 15000);
+        }
+
+        function createSparkle(x, y) {
+            const sparkle = document.createElement('div');
+            sparkle.classList.add('sparkle');
+            sparkle.style.left = x + 'px';
+            sparkle.style.top = y + 'px';
+            sparkle.style.animationDelay = Math.random() * 0.5 + 's';
+            document.body.appendChild(sparkle);
+
+            setTimeout(() => {
+                sparkle.remove();
+            }, 2000);
+        }
+
+        let lastSparkle = 0;
+        document.addEventListener('mousemove', function(e) {
+            const now = Date.now();
+            if (now - lastSparkle > 100) {
+                createSparkle(e.clientX, e.clientY);
+                lastSparkle = now;
+            }
+        });
+
+        setInterval(createHeart, 500);
+
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+        const popup = document.getElementById('popup');
+        
+        let noClickCount = 0;
+        let yesFontSize = 20;
+        let noFontSize = 20;
+
+        noBtn.addEventListener('click', function() {
+            noClickCount++;
+            
+            // Make Yes button bigger
+            yesFontSize += 5;
+            yesBtn.style.fontSize = yesFontSize + 'px';
+            yesBtn.style.padding = (15 + noClickCount * 3) + 'px ' + (40 + noClickCount * 5) + 'px';
+            
+            // Make No button smaller
+            if (noFontSize > 8) {
+                noFontSize -= 2;
+                noBtn.style.fontSize = noFontSize + 'px';
+                noBtn.style.padding = (15 - noClickCount * 1.5) + 'px ' + (40 - noClickCount * 2) + 'px';
+            }
+
+            noBtn.style.animation = 'shake 0.5s';
+            setTimeout(() => {
+                noBtn.style.animation = '';
+            }, 500);
+
+            if (noClickCount === 1) {
+                noBtn.textContent = 'Are you sure? 🥺';
+            } else if (noClickCount === 2) {
+                noBtn.textContent = 'Really? 😢';
+            } else if (noClickCount === 3) {
+                noBtn.textContent = 'Please? 🥹';
+            } else if (noClickCount >= 4) {
+                noBtn.textContent = 'Nooooooooooooo';
+                noBtn.style.fontSize = '8px';
+            }
+        });
+
+        yesBtn.addEventListener('click', function() {
+            music.play().catch(err => console.log(err));
+            
+            popup.style.display = 'flex';
+            for (let i = 0; i < 50; i++) {
+                setTimeout(createHeart, i * 50);
+            }
+            // Create sparkle burst
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => {
+                    const x = window.innerWidth / 2 + (Math.random() - 0.5) * 400;
+                    const y = window.innerHeight / 2 + (Math.random() - 0.5) * 400;
+                    createSparkle(x, y);
+                }, i * 50);
+            }
+        });
+
+        function closePopup() {
+            popup.style.display = 'none';
+            
+            setTimeout(() => {
+                alert("You're Gorgeous! 😍✨");
+                setTimeout(() => {
+                    alert("You're Amazing! 🌟💖");
+                    setTimeout(() => {
+                        alert("You're My Everything! 💕👑");
+                    }, 500);
+                }, 500);
+            }, 300);
+        }
+
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                25% { transform: translateX(-10px); }
+                75% { transform: translateX(10px); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

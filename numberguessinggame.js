@@ -25,7 +25,7 @@ const minNumber = 1;
       if (guess === randomNumber) {
         message.textContent = `🎉 Congratulations! You guessed ${randomNumber} in ${attempts} attempts.`;
         running = false;
-        window.alert("Congrats ypu are offically a nigga");
+        window.alert("Congrats");
         window.prompt("But are you ok tho???");
       } else if (guess < randomNumber) {
         message.textContent = "⬇️ Too low! Try again.";
