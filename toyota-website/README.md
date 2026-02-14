@@ -120,7 +120,7 @@ curl -X POST http://localhost:3001/api/contact \
     "name": "John Doe",
     "email": "john@example.com",
     "phone": "123-456-7890",
-    "message": "Interested in the Camry"
+    "message": "Interested in the Camry"n
   }'
 ```
 

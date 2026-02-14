@@ -1,0 +1,76 @@
+Act as a world-class senior front-end developer and elite UI/UX designer with expertise in high-end digital product design.
+
+Create a **fully functional, production-quality 3-page website** using only **HTML, CSS, and vanilla JavaScript** (no frameworks, libraries, or external UI kits). The final result must resemble a premium luxury brand or top creative agency website — visually stunning, modern, elegant, sleek, highly interactive, and polished to professional marketplace standards.
+
+The design must feature a refined, ultra-modern aesthetic with a luxury feel, flawless spacing, balanced layout composition, and perfect typography hierarchy. Include glassmorphism elements, subtle depth effects, soft shadows, elegant gradients, and a sophisticated color palette. Typography must be professionally paired (Google Fonts allowed) and visually harmonious. The layout should feel high-end and comparable to paid premium templates.
+
+PAGES REQUIRED
+Build exactly three pages:
+
+1. **Home** — hero section, featured highlights, media showcase, call-to-action areas, and visually impressive sections.
+2. **About / Services** — informational sections, service cards, feature lists, expandable or tabbed content blocks.
+3. **Contact** — elegant contact form, JavaScript validation, contact details section, and a map placeholder layout.
+
+ANIMATIONS & INTERACTIONS
+Include smooth and refined animations throughout the site:
+
+• Smooth page transitions
+• Scroll-triggered animations
+• Hover micro-interactions
+• Animated navigation bar with active link indicator
+• Image reveal animations
+• Subtle parallax scrolling sections
+• Smooth scrolling navigation
+• Loading animation on page start
+• Fade-in section reveals
+• Animated buttons (glow, ripple, or gradient motion)
+• Elegant custom cursor effect that enhances design without distraction
+
+MEDIA INTEGRATION
+Design sections that support images and video content. Use placeholder media where necessary, but structure layouts so multimedia elements integrate seamlessly and enhance the aesthetic instead of feeling added on.
+
+INTERACTIVITY FEATURES
+Ensure strong interactive behavior and responsiveness:
+
+• Fully responsive across mobile, tablet, and desktop
+• Interactive cards or tiles
+• Modal popup component
+• Expandable FAQ or tabbed interface section
+• JavaScript form validation
+• Floating back-to-top button
+• Scroll progress indicator
+
+EXTRA POLISH REQUIREMENTS
+Include premium-level finishing touches:
+
+• Dark/light mode toggle with animated transition
+• SEO-friendly HTML structure
+• Proper semantic HTML5 markup
+• Accessibility considerations (ARIA where appropriate, readable contrast, keyboard navigation support)
+• Clean visual hierarchy and strong design balance
+
+CODE QUALITY STANDARDS
+All code must be clean, readable, professional, and production-ready:
+
+• Proper indentation and comments
+• Logical file structure
+• Optimized CSS organization
+• Efficient, non-redundant JavaScript
+• No unnecessary code or unused styles
+
+FILES MUST BE SEPARATED EXACTLY AS FOLLOWS:
+
+* index.html
+* about.html
+* contact.html
+* style.css
+* script.js
+
+OUTPUT RULES
+Return all files separately with clear file names.
+Do not include explanations.
+Do not simplify the design.
+Do not omit any requested feature.
+
+FINAL OBJECTIVE
+The completed website should look like a top-tier premium template sold on a professional marketplace and must be impressive enough to immediately stand out to experienced designers and senior developers.
